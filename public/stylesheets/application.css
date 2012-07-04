@@ -190,6 +190,15 @@ button:active {
   box-shadow: #f09700 0 1px 2px inset;
 }
 
+#vegetable {
+  width: 75%;
+  padding: 16px;
+}
+#vegetable img {
+  margin: auto;
+  width: 100%;
+}
+
 @media (min-width: 30em) and (max-width: 60em) {
   #vegetable {
     width: 75%;

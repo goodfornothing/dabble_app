@@ -80,6 +80,15 @@ button {
   color: darken($background-color,20);
 }
 
+#vegetable {
+  width: 75%;
+  padding: $base-font-size;
+  img {
+    margin: auto;
+    width: 100%;
+  }
+}
+  
 @include at-breakpoint(30em 12 60em) { 
   #vegetable {
     width: 75%;
