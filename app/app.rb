@@ -12,7 +12,7 @@ class Diced < Padrino::Application
 
   set :google_analytics, "XXXXXXXX"
   set :typekit, "jsu6fgr"
-  set :title, "Just add veg"
+  set :title, "Dabble with your dinner"
   set :base_host, "justaddveg.herokuapp.com"
-  set :description, "Sneakily smuggle some veg into your kids' meals"
+  set :description, "Easy ways to veg-up your old favourite meals"
 end

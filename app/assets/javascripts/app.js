@@ -58,7 +58,9 @@ App.mealsController = Ember.ArrayController.create({
         App.Meal.create({id: 5, name: 'Meat and two veg', slug: 'meat', summer: [
           {idea: 'Pod some fresh peas and broad beans and boil for 3 minutes', vegetable: 'peas'}]}),
         App.Meal.create({id: 6, name: 'Bangers and mash', slug: 'bangers', summer: [
-          {idea: 'Chop some watercress leaves and add them to your mash', vegetable: 'watercress'}]})
+          {idea: 'Chop some watercress leaves and add them to your mash', vegetable: 'watercress'},
+          {idea: 'Chop and fry a leak, then add it to the mash', vegetable: 'leek'}
+          ]})
     ]
 });
 
