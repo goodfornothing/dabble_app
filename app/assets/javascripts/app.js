@@ -20,7 +20,6 @@ App.selectedMealController = Ember.Object.create({
 App.selectedHintController = Ember.Object.create({
   hint: null,
   vegetable: function() {
-    console.log("Vegetable");
     var hint = this.get('hint');
     if(hint) {
       return '/veg/' + hint.vegetable + ".png";
@@ -38,7 +37,6 @@ App.Meal = Ember.Object.extend({
 App.ImgView = Em.View.extend({
     tagName: 'img',
     didInsertElement: function() {
-        console.log(this.get('src'));
     }
 });
 
@@ -56,7 +54,9 @@ App.mealsController = Ember.ArrayController.create({
         App.Meal.create({id: 4, name: 'Curry', slug: 'curry', summer: [
           {idea: 'Add some quartered tomatoes for the last 10 minutes', vegetable: 'quartered-tomatoes'}]}),
         App.Meal.create({id: 5, name: 'Meat and two veg', slug: 'meat', summer: [
-          {idea: 'Pod some fresh peas and broad beans and boil for 3 minutes', vegetable: 'peas'}]}),
+          {idea: 'Pod some fresh peas and broad beans and boil for 3 minutes', vegetable: 'peas'},
+          {idea: 'Pod some fresh peas and broad beans and boil for 3 minutes', vegetable: 'peas'},
+          ]}),
         App.Meal.create({id: 6, name: 'Bangers and mash', slug: 'bangers', summer: [
           {idea: 'Chop some watercress leaves and add them to your mash', vegetable: 'watercress'},
           {idea: 'Chop and fry a leak, then add it to the mash', vegetable: 'leek'}
