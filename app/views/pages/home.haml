@@ -1,0 +1,13 @@
+-# coding: utf-8
+
+:plain
+  <script type="text/x-handlebars">
+    {{view Ember.Select
+           contentBinding="App.mealsController"
+           selectionBinding="App.selectedMealController.meal"
+           optionLabelPath="content.name"
+           optionValuePath="content.id"
+           prompt="Choose a meal:"}}
+    <h1>{{App.selectedMealController.meal.name}}</h1>
+    <h2>{{App.selectedMealController.meal.summer}}</h2>
+  </script>​
