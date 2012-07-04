@@ -11,19 +11,33 @@
     {{#if App.selectedMealController.meal}}
     <div id="hint">
       <h1>{{App.selectedMealController.meal.name}}</h1>
-      <h2>{{App.selectedMealController.hint}}</h2>
+      <h2>{{App.selectedHintController.hint.idea}}</h2>
+      {{#with App.selectedHintController}}
+        <div id="vegetable">
+          <img {{bindAttr src="vegetable"}}>
+        </div>
+      {{/with}}
     </div>
     <div id="another">
       <span class="another">
-       <button {{action "another" target="App.selectedMealController.another"}}>
+       <button {{action "another" target="App"}}>
         Another please
        </button>
       </span>
       <span class="share">
-        {{#view Ember.Button targetBinding="this" action="share"}}Share this{{/view}}
+      <button {{action "share" target="App"}}>
+        Share this
+       </button>
       </span>
       <span class="add">
-        {{#view Ember.Button targetBinding="this" action="add"}}Add your own{{/view}}
+        <button {{action "add" target="App"}}>
+          Add your own
+        </button>
+      </span>
+      <span class="other">
+        <button {{action "other" target="App"}}>
+          Other veg you could use
+        </button>
       </span>
     </div>
     {{/if}}

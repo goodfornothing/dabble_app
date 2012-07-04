@@ -125,15 +125,6 @@ h1 a {
   color: #ebf5d6 !important;
 }
 
-select {
-  font-family: "freight-sans-pro", sans-serif;
-  font-size: 2em;
-  line-height: 1.5em;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 1.5em;
-}
-
 h2 {
   text-align: center;
   font-family: "freight-sans-pro", sans-serif;
@@ -199,6 +190,27 @@ button:active {
   box-shadow: #f09700 0 1px 2px inset;
 }
 
+@media (min-width: 30em) and (max-width: 60em) {
+  #vegetable {
+    width: 100%;
+    padding: 16px;
+  }
+  #vegetable img {
+    margin: auto;
+    width: 100%;
+  }
+}
+@media (min-width: 60em) {
+  #vegetable {
+    width: 75%;
+    margin: auto;
+    padding: 16px;
+  }
+  #vegetable img {
+    margin: auto;
+    width: 100%;
+  }
+}
 #idea {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
@@ -209,4 +221,13 @@ button:active {
   -ms-border-radius: 16px;
   -o-border-radius: 16px;
   border-radius: 16px;
+}
+#idea select {
+  font-family: "freight-sans-pro", sans-serif;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  margin: auto;
+  display: inline-block;
 }

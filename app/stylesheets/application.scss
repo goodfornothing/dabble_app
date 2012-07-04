@@ -54,13 +54,6 @@ h1 {
   }
 }
 
-select {
-  font-family: "freight-sans-pro", sans-serif;
-  @include adjust-font-size-to($base-font-size * 2, $lines:2);
-  width: 100%;
-  text-align: center;
-  @include trailer(1);
-}
 
 h2 {
   text-align: center;
@@ -87,10 +80,44 @@ button {
   color: darken($background-color,20);
 }
 
+@include at-breakpoint(30em 12 60em) { 
+  #vegetable {
+    width: 100%;
+    padding: $base-font-size;
+    img {
+      margin: auto;
+      width: 100%;
+    }
+  }
+}
+
+
+@include at-breakpoint(60em 12) { 
+  #vegetable {
+    width: 75%;
+    margin: auto;
+    padding: $base-font-size;
+    img {
+      margin: auto;
+      width: 100%;
+    }
+  }
+}
+
 #idea {
   @include leader(1);
   @include trailer(1);
   background-color: darken($background-color, 10);
   padding: $base-font-size;
   @include border-radius($base-font-size);
+
+
+  select {
+    font-family: "freight-sans-pro", sans-serif;
+    @include adjust-font-size-to($base-font-size * 2, $lines:2);
+    text-align: center;
+    @include trailer(1);
+    margin: auto;
+    display: inline-block;
+  }
 }
