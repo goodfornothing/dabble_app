@@ -82,7 +82,7 @@ button {
 
 @include at-breakpoint(30em 12 60em) { 
   #vegetable {
-    width: 100%;
+    width: 75%;
     padding: $base-font-size;
     img {
       margin: auto;
@@ -94,7 +94,7 @@ button {
 
 @include at-breakpoint(60em 12) { 
   #vegetable {
-    width: 75%;
+    width: 40%;
     margin: auto;
     padding: $base-font-size;
     img {

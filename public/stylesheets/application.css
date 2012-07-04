@@ -192,7 +192,7 @@ button:active {
 
 @media (min-width: 30em) and (max-width: 60em) {
   #vegetable {
-    width: 100%;
+    width: 75%;
     padding: 16px;
   }
   #vegetable img {
@@ -202,7 +202,7 @@ button:active {
 }
 @media (min-width: 60em) {
   #vegetable {
-    width: 75%;
+    width: 40%;
     margin: auto;
     padding: 16px;
   }
