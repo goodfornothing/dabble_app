@@ -15,6 +15,8 @@ $link-color:   #8a4945;
 
 @import "susy";
 
+@import "sassy-buttons";
+
 @include establish-baseline;
 
 body {
@@ -40,11 +42,16 @@ h1 {
   text-align: center;
   font-family: "learning-curve", sans-serif;
   color: lighten($background-color, 40);
-  @include adjust-font-size-to($base-font-size * 4, $lines:4);
+  @include trailer(0.25);
+  @include adjust-font-size-to($base-font-size * 4, $lines:2);
   @include at-breakpoint(60em 12) { 
-    @include adjust-font-size-to($base-font-size * 6, $lines:6);
+    @include adjust-font-size-to($base-font-size * 6, $lines:4);
   }
   @include text-shadow(rgba(0,0,0,0.2) 0px 1px 0px);
+  a {
+    font-family: "learning-curve", sans-serif;
+    color: lighten($background-color, 40) !important;
+  }
 }
 
 select {
@@ -52,17 +59,32 @@ select {
   @include adjust-font-size-to($base-font-size * 2, $lines:2);
   width: 100%;
   text-align: center;
+  @include trailer(1);
 }
 
 h2 {
   text-align: center;
   font-family: "freight-sans-pro", sans-serif;
   color: lighten($background-color, 40);
-  @include adjust-font-size-to($base-font-size * 1.5, $lines:2);
+  @include adjust-font-size-to($base-font-size * 1.5, $lines:1);
+  @include trailer(1);
   @include at-breakpoint(60em 12) { 
     @include adjust-font-size-to($base-font-size * 2, $lines:2);
   }
   @include text-shadow(rgba(0,0,0,0.2) 0px 1px 0px);
+}
+
+#another {
+  @include leader(1);
+  text-align: center;
+}
+
+button {
+  @include sassy-button("shiny", $base-font-size, $base-font-size, #ffd71a, #ffaa1a);
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  color: darken($background-color,20);
 }
 
 #idea {

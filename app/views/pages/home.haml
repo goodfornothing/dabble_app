@@ -2,12 +2,29 @@
 
 :plain
   <script type="text/x-handlebars">
-    {{view Ember.Select
-           contentBinding="App.mealsController"
-           selectionBinding="App.selectedMealController.meal"
-           optionLabelPath="content.name"
-           optionValuePath="content.id"
-           prompt="Choose a meal:"}}
-    <h1>{{App.selectedMealController.meal.name}}</h1>
-    <h2>{{App.selectedMealController.meal.summer}}</h2>
+      {{view Ember.Select
+             contentBinding="App.mealsController"
+             selectionBinding="App.selectedMealController.meal"
+             optionLabelPath="content.name"
+             optionValuePath="content.id"
+             prompt="What's for dinner?"}}
+    {{#if App.selectedMealController.meal}}
+    <div id="hint">
+      <h1>{{App.selectedMealController.meal.name}}</h1>
+      <h2>{{App.selectedMealController.hint}}</h2>
+    </div>
+    <div id="another">
+      <span class="another">
+       <button {{action "another" target="App.selectedMealController.another"}}>
+        Another please
+       </button>
+      </span>
+      <span class="share">
+        {{#view Ember.Button targetBinding="this" action="share"}}Share this{{/view}}
+      </span>
+      <span class="add">
+        {{#view Ember.Button targetBinding="this" action="add"}}Add your own{{/view}}
+      </span>
+    </div>
+    {{/if}}
   </script>​

@@ -48,11 +48,12 @@
     .page
       %header
         %h1
-          Just add veg!
+          %a{:href=>"/"}
+            Dabble with your dinner!
         :plain
-          <script type="text/x-handlebars">
-            <h2>{{App.selectedIntroController.intro}}</h2>
-          </script>
+          <h2>
+            Easy ways to "veg-up" your old favourites
+          </h2>
       #idea
         = yield
       
